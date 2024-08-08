@@ -9,6 +9,11 @@ trait BulkActionsHelpers
         return $this->bulkActionsStatus;
     }
 
+    public function getBulkActionsDropdownVisible(): bool
+    {
+        return $this->bulkActionsDropdownVisible;
+    }
+
     public function bulkActionsAreEnabled(): bool
     {
         return $this->getBulkActionsStatus() === true;
@@ -65,6 +70,10 @@ trait BulkActionsHelpers
     public function showBulkActionsDropdown(): bool
     {
         $show = false;
+        
+        if(!$this->getBulkActionsDropdownVisible()) {
+            return $show;
+        }
 
         if ($this->bulkActionsAreEnabled()) {
             if ($this->hasBulkActions()) {

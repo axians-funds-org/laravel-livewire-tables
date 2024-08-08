@@ -12,6 +12,8 @@ trait WithBulkActions
 
     public bool $bulkActionsStatus = true;
 
+    public bool $bulkActionsVisible = false;
+
     public bool $selectAll = false;
 
     public array $bulkActions = [];
