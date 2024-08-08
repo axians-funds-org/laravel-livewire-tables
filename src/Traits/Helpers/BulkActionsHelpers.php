@@ -159,6 +159,9 @@ trait BulkActionsHelpers
 
     public function showBulkActionsDropdownAlpine(): bool
     {
+        if (!$this->showBulkActionsDropdown())
+            return false;
+        
         return $this->bulkActionsAreEnabled() && $this->hasBulkActions();
     }
 }
