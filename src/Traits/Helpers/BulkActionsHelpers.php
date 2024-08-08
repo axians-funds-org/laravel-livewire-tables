@@ -70,10 +70,6 @@ trait BulkActionsHelpers
     public function showBulkActionsDropdown(): bool
     {
         $show = false;
-        
-        if(!$this->getBulkActionsDropdownVisible()) {
-            return $show;
-        }
 
         if ($this->bulkActionsAreEnabled()) {
             if ($this->hasBulkActions()) {
@@ -154,14 +150,14 @@ trait BulkActionsHelpers
     public function setAllSelected(): void
     {
         $this->setSelectAllEnabled();
-        $this->setSelected((clone $this->baseQuery())->pluck($this->getPrimaryKey())->map(fn ($item) => (string) $item)->toArray());
+        $this->setSelected((clone $this->baseQuery())->pluck($this->getPrimaryKey())->map(fn($item) => (string) $item)->toArray());
     }
 
     public function showBulkActionsDropdownAlpine(): bool
     {
-        if (!$this->showBulkActionsDropdown())
+        if (!$this->getBulkActionsDropdownVisible()) {
             return false;
-        
+        }
         return $this->bulkActionsAreEnabled() && $this->hasBulkActions();
     }
 }
