@@ -633,7 +633,7 @@
                     $component->getParametersForConfigurableArea('toolbar-right-start'))
             @endif
 
-            @if ($component->showBulkActionsDropdownAlpine())
+            @if ($component->showBulkActionsDropdown())
                 <div x-cloak x-show="(selectedItems.length > 0 || alwaysShowBulkActions)" class="mb-3 mb-md-0">
                     <div class="dropdown d-block d-md-inline">
                         <button class="btn dropdown-toggle d-block w-100 d-md-inline" type="button"
