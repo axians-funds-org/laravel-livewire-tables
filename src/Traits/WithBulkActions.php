@@ -12,7 +12,7 @@ trait WithBulkActions
 
     public bool $bulkActionsStatus = true;
 
-    public bool $bulkActionsVisible = false;
+    public bool $bulkActionsDropdownVisible = true;
 
     public bool $selectAll = false;
 
