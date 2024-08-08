@@ -69,6 +69,9 @@ trait BulkActionsHelpers
 
     public function showBulkActionsDropdown(): bool
     {
+        if(!$this->getBulkActionsDropdownVisible())
+            return false;
+
         $show = false;
 
         if ($this->bulkActionsAreEnabled()) {
@@ -155,9 +158,6 @@ trait BulkActionsHelpers
 
     public function showBulkActionsDropdownAlpine(): bool
     {
-        if (!$this->getBulkActionsDropdownVisible()) {
-            return false;
-        }
         return $this->bulkActionsAreEnabled() && $this->hasBulkActions();
     }
 }
