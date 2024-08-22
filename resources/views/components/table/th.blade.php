@@ -68,7 +68,7 @@
             {{ $column->getTitle() }}
         @else
             <div 
-                class="d-flex align-items-center"
+                class="d-flex align-items-center justify-content-between"
                 wire:click="sortBy('{{ ($column->isSortable() ? $column->getColumnSelectName() : $column->getSlug()) }}')"
                 style="cursor:pointer;"
             >
