@@ -532,7 +532,7 @@
     @endif
 @elseif ($theme === 'bootstrap-5')
     <div class="d-md-flex justify-content-between mb-3">
-        <div class="d-md-flex">
+        <div class="d-md-flex align-items-center">
             @if ($component->hasConfigurableAreaFor('toolbar-left-start'))
                 @include(
                     $component->getConfigurableAreaFor('toolbar-left-start'),
@@ -626,7 +626,7 @@
             @endif
         </div>
 
-        <div class="d-md-flex">
+        <div class="d-md-flex align-items-center">
             @if ($component->hasConfigurableAreaFor('toolbar-right-start'))
                 @include(
                     $component->getConfigurableAreaFor('toolbar-right-start'),
