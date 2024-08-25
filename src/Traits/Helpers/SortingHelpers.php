@@ -143,4 +143,28 @@ trait SortingHelpers
     {
         return $this->defaultSortingLabelDesc;
     }
+
+    public function getSortAscendingIcon(): string
+    {
+        return
+            '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 3l-7 7h4v7h6v-7h4l-7-7zm-7 9v2h14v-2H3z" clip-rule="evenodd" />
+            </svg>';
+    }
+
+    public function getSortDescendingIcon(): string
+    {
+        return
+            '<svg xmlns="http://www.w3.org/2000/svg" class="ml-1" style="width:1em;height:1em;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>';
+    }
+
+    public function getSortIcon(): string
+    {
+        return
+            '<svg xmlns="http://www.w3.org/2000/svg" class="ml-1" style="width:1em;height:1em;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
+            </svg>';
+    }
 }
