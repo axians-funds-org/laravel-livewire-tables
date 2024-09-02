@@ -76,11 +76,11 @@
 
                 <span class="relative d-flex align-items-center">
                     @if ($direction === 'asc')
-                        {{ $component->getSortAscendingIcon() }}
+                        {!! $component->getSortAscendingIcon() !!}
                     @elseif ($direction === 'desc')
-                        {{ $component->getSortDescendingIcon() }}
+                        {!! $component->getSortDescendingIcon() !!}
                     @else
-                        {{ $component->getSortIcon() }}
+                        {!! $component->getSortIcon() !!}
                     @endif
                 </span>
             </div>
