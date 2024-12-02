@@ -49,7 +49,7 @@
         @endif
     </div>
 @elseif ($theme === 'bootstrap-4')
-    <div >
+    <div>
         @if ($component->paginationVisibilityIsEnabled())
             @if ($component->paginationIsEnabled() && $component->isPaginationMethod('standard') && $rows->lastPage() > 1)
                 <div class="row mt-3">
@@ -92,7 +92,7 @@
         @endif
     </div>
 @elseif ($theme === 'bootstrap-5')
-    <div >
+    <div>
         @if ($component->paginationVisibilityIsEnabled())
             @if ($component->paginationIsEnabled() && $component->isPaginationMethod('standard') && $rows->lastPage() > 1)
                 <div class="row mt-3">
@@ -100,14 +100,16 @@
                         {{ $rows->links('livewire-tables::specific.bootstrap-4.pagination') }}
                     </div>
 
-                    <div class="col-12 col-md-6 text-center text-md-end text-muted">
-                        <span>@lang('Showing')</span>
-                        <strong>{{ $rows->count() ? $rows->firstItem() : 0 }}</strong>
-                        <span>@lang('to')</span>
-                        <strong>{{ $rows->count() ? $rows->lastItem() : 0 }}</strong>
-                        <span>@lang('of')</span>
-                        <strong><span x-text="paginationTotalItemCount"></span></strong>
-                        <span>@lang('results')</span>
+                    <div class="col-12 col-md-6 text-md-end text-muted my-auto">
+                        <div>
+                            <span>@lang('Showing')</span>
+                            <strong>{{ $rows->count() ? $rows->firstItem() : 0 }}</strong>
+                            <span>@lang('to')</span>
+                            <strong>{{ $rows->count() ? $rows->lastItem() : 0 }}</strong>
+                            <span>@lang('of')</span>
+                            <strong><span x-text="paginationTotalItemCount"></span></strong>
+                            <span>@lang('results')</span>
+                        </div>
                     </div>
                 </div>
             @elseif ($component->paginationIsEnabled() && $component->isPaginationMethod('simple'))
@@ -116,11 +118,13 @@
                         {{ $rows->links('livewire-tables::specific.bootstrap-4.pagination') }}
                     </div>
 
-                    <div class="col-12 col-md-6 text-center text-md-end text-muted">
-                        <span>@lang('Showing')</span>
-                        <strong>{{ $rows->count() ? $rows->firstItem() : 0 }}</strong>
-                        <span>@lang('to')</span>
-                        <strong>{{ $rows->count() ? $rows->lastItem() : 0 }}</strong>
+                    <div class="col-12 col-md-6 text-md-end text-muted my-auto">
+                        <div>
+                            <span>@lang('Showing')</span>
+                            <strong>{{ $rows->count() ? $rows->firstItem() : 0 }}</strong>
+                            <span>@lang('to')</span>
+                            <strong>{{ $rows->count() ? $rows->lastItem() : 0 }}</strong>
+                        </div>
                     </div>
                 </div>
             @else
