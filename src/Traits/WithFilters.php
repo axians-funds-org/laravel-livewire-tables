@@ -49,6 +49,13 @@ trait WithFilters
             }
         }
 
+        $this->afterFiltersAppliedCallback()();
+
         return $this->getBuilder();
+    }
+
+    public function afterFiltersAppliedCallback(): callable
+    {
+        return fn() => null;
     }
 }
