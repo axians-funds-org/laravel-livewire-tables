@@ -28,6 +28,13 @@ trait ComponentHelpers
         return $this->builder;
     }
 
+    public function getBuilderWithFilters(): Builder
+    {
+        $this->setBuilder($this->builder());
+        $this->applyFilters();
+        return $this->builder;
+    }
+ 
     public function hasPrimaryKey(): bool
     {
         return $this->primaryKey !== null;
